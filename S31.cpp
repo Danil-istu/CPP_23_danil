@@ -1,41 +1,17 @@
 #include <iostream>
 using namespace std;
 
-void bubbleSort(int list[], int listLength)
-{
-	while(listLength--)
-	{
-		bool swapped = false;
-
-		for(int i = 0; i < listLength; i++)
-		{
-			if(list[i] > list[i + 1])
-			{
-				swap(list[i], list[i + 1]);
-				swapped = true;
-			}
-		}
-
-		if(swapped == false)
-			break;
-	}
-}
+const int max_length{6};
 
 int main()
 {
-	int list[5] = {3,19,8,0,48};
-	cout << "Input array ..." << endl;
-	for(int i = 0; i < 5; i++)
-		cout << list[i] << '\t';
-	cout << endl;
+ int i;
+ char name[][max_length]={"Zero","One","Two","Three","Four","Five","Six", "Seven","Eight","Nine"};
 
-	bubbleSort(list, 5);
+  cout << "enter a number from 0 to 9: ";
+  cin>>i;
 
-	cout << "Sorted array ..." << endl;
-	for(int i = 0; i < 5; i++)
-		cout << list[i] << '\t';
-	cout << endl;
+  cout<<name[i];
+
+    return 0;
 }
-
-
-
